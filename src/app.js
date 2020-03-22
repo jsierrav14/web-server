@@ -11,7 +11,7 @@ const publicDirectoryPath = path.join(__dirname, '../public');
 const viewPath = path.join(__dirname, '../templates');
 const partialsPath = path.join(__dirname, '../templates/partials')
 const app = express();
-
+const port = process.env.PORT ||  3000;
 
 app.set('view engine', 'hbs');
 app.set('views', viewPath);
@@ -118,5 +118,5 @@ app.get('/product', (req, res) => {
 })
 
 app.listen(3001, () => {
-    console.log('Server is up on port 3001')
+    console.log('Server is up on port '+port);
 })
