@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit',(e)=>{
            messageTwo.textContent = `${data.error}`;
         }else{
 
-            messageOne.textContent =`Summary : ${data.summary} Temperature: ${data.temperature} PrecipProbability: ${data.precipProbability}`
+            messageOne.textContent =`Summary : ${data.summary} Temperature: ${data.temperature} PrecipProbability: ${data.precipProbability}. Timezone ${data.timezone}`
         }
     })
 

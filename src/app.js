@@ -78,12 +78,13 @@ app.get('/weather', (req, res) => {
                 if (error) {
                     return console.log(error);
                 }
-                const { summary, temperature, precipProbability } = forescastData;
+                const { summary, temperature, precipProbability, timezone} = forescastData;
 
                 res.send({
                     summary:summary,
                     temperature:temperature,
-                    precipProbability:precipProbability
+                    precipProbability:precipProbability,
+                    timezone: timezone
                 })
 
             })
